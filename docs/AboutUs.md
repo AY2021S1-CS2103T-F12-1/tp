@@ -27,3 +27,10 @@ title: About Us
 [github](https://github.com/Anthony6401)
 
 * Role: Developer
+
+### Heinrich
+<img src="images/HynRidge.png" width="200px">
+
+[github](https://github.com/HynRidge)
+
+* Role: Developer
