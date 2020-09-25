@@ -243,7 +243,7 @@ _{Explain here how the data archiving feature will be implemented}_
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
 
-**Value proposition**: Allow CS students to manage/access their files by typing 
+**Value proposition**: CS students can manage/access their files by typing 
                        and using a simple GUI. Help CS students to see file relations easily.
 
 
