@@ -3,7 +3,7 @@ layout: page
 title: User Guide
 ---
 
-AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized for use via a Command Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps.
+HelloFile is a desktop app for managing files, optimised for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). By being able to tag frequently used files/folders with a short nickname, you will be able to manage and access your files with ease.
 
 * Table of Contents
 {:toc}
@@ -159,20 +159,26 @@ _{explain the feature here}_
 --------------------------------------------------------------------------------------------------------------------
 
 ## FAQ
-
 **Q**: How do I transfer my data to another Computer?<br>
-**A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous AddressBook home folder.
+**A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HelloFile home folder.
 
+**Q**: What if the name or the directory of the file I tagged is changed? Can I still access the file using HelloFile?<br>
+**A**: No. HelloFile cannot trace the file if its name or directory is changed, but if you still want to manage the file, you can tag it again.
+
+**Q**: Can tag name be duplicated?<br>
+**A**: No. The tag names must be unique for all files being managed.
 --------------------------------------------------------------------------------------------------------------------
 
 ## Command summary
 
 Action | Format, Examples
 --------|------------------
-**Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
+**Tag** | `tag <filename> /t <tagname>` <br> e.g., `tag c:/myfolder/file.jpg /t newTag`
+**Show** | `show <tag name>`
+**Untag** | `untag <tag name>`
+**Retag** | `retag <tag name> /t <new tag name>` <br> e.g., `retag myTag /t anotherNameForMyTag`
+**Open** | `open <tagname>`
+**List** | `ls`
 **Clear** | `clear`
-**Delete** | `delete INDEX`<br> e.g., `delete 3`
-**Edit** | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
-**Find** | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`
-**List** | `list`
-**Help** | `help`
+**Help** | `help [<command>]`
+**Exit** | `exit`

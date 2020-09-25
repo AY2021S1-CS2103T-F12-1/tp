@@ -2,58 +2,28 @@
 layout: page
 title: About Us
 ---
-
-We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
-
-You can reach us at the email `seer[at]comp.nus.edu.sg`
-
 ## Project team
 
-### John Doe
+### Lu Luoyi
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/luo-git.png" width="200px" alt="Luoyi's profile picture">
 
-[[homepage](http://www.comp.nus.edu.sg/~damithch)]
-[[github](https://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
-
-* Role: Project Advisor
-
-### Jane Doe
-
-<img src="images/johndoe.png" width="200px">
-
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
-
-* Role: Team Lead
-* Responsibilities: UI
-
-### Johnny Doe
-
-<img src="images/johndoe.png" width="200px">
-
-[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
+[github](https://github.com/luo-git)
 
 * Role: Developer
-* Responsibilities: Data
 
-### Jean Doe
+### Ma Yueran
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/ma-yueran.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](https://github.com/Ma-Yueran)]
 
 * Role: Developer
-* Responsibilities: Dev Ops + Threading
+* Responsibilities: Not available
 
-### James Doe
+### Anthony Lie
+<img src="images/anthony6401.png" width="200px">
 
-<img src="images/johndoe.png" width="200px">
-
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[github](https://github.com/Anthony6401)
 
 * Role: Developer
-* Responsibilities: UI

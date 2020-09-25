@@ -262,30 +262,262 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `HelloFile` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+<br />
+
+**Use case ID: UC01**
+
+**Use case: Create fileInfo**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1. User requests to tag a certain file using the absolute file path.
+2. HelloFile recognises the file path to be valid.
+3. HelloFile creates the tag and display the fileInfo.
+
+    Use case ends.
+    
+**Extensions**
+
+* 2a. HelloFile detects the file path is invalid.
+
+    * 2a1. HelloFile prompts the user that the file path is wrong.
+    
+        Use case resumes from step 1.
+        
+* 2b. HelloFile detects no tag input.
+
+    * 2b1. HelloFile prompts the user for a tag.
+    
+        Use case resumes from step 1.
+        
+* 2c. HelloFile detects a duplicate tag name.
+
+	* 2c1. HelloFile prompts the user for another tag name. 
+	
+        Use case resumes from step 1.
+        
+* *a. HelloFile has no permission to read or write to the file system.
+
+    * *a1. HelloFile prompts the user that it needs the read and write permission.
+    
+        Use case resumes.
+
+<br />
+
+**User case ID: UC02**
+
+**Use Case: Access file using tag**
+
+**MSS**
+
+1. User requests to open a file using a tag.
+2. HelloFile recognises the tag to be valid.
+3. HelloFile opens the specified file using the default application.
+        
+    Use case ends.
+        
+**Extension**
+
+* 2a. HelloFile detects that the tag is invalid.
+
+	* 2a1. HelloFile prompts the user that the tag is wrong.
+	
+        Use case resumes from step 1.
+        
+* 3a. HelloFile detects that the target file does not exist.
+		
+	* 3a1. HelloFile prompts that the target file does not exist.
+		
+        Use case resumes from step 1.
+		    
+* 3b. HelloFile detects no default application to open the file.
+	
+	* 3b1. HelloFile prompts the user to choose an application to open the file.
+		
+	    Use case resumes form step 1.
+		    
+* 3c. HelloFile encounters an exception when opening the file.
+	
+	* 3c1. HelloFile shows the error message.
+		
+	    Use case resumes from step 1.
+		    
+* *a. HelloFile has no permission to read or write to the file system.
+
+	* *a1. HelloFile prompts the user that it needs the read and write permission.
+	
+	    Use case resumes.
+
+<br />
+
+**UseCase ID: UC03**
+
+**Use Case: Rename tag**
+
+**MSS**
+
+1. User requests to rename the tag of a tagged file.
+2. HelloFile replaces the tag of the file with the new tag.
+
+    Use case ends.
+    
+**Extensions**
+
+* 2a. HelloFile failed to recognize the tag.
+
+	* 2a1. HelloFile prompts that tag does not exist.
+	
+    	Use case resumes from step 1
+    	
+* 2b. HelloFile failed to recognize the new tag input.
+
+    * 2b1. HelloFile prompts that the new tag is invalid.
+    
+        Use case resumes from step 1. 
+        
+* 2c. HelloFile detects a duplicate tag name.
+
+	* 2c1. HelloFile prompts the user for another tag name. 
+	
+        Use case resumes from step 1.
+        
+* *a. HelloFile has no permission to read or write to the file system.
+
+	* *a1. HelloFile prompts the user that it needs the read and write permission.
+	
+	    Use case resumes.
+
+<br />
+
+**UseCase ID: UC04**
+
+**Use Case: Untag a file**
+
+**MSS**
+
+1. User requests to untag a file.
+2. HelloFile recognises that the tag exist.
+3. HelloFile removes the file from access.
+
+    Use case ends.
+    
+**Extensions**
+
+* 2a. HelloFile fails to recognize the tag.
+
+	* 2a1. HelloFile shows the error message.
+	
+	    Use case resumes from step 1.
+	    
+* *a. HelloFile has no permission to read or write to the file system.
+
+	* *a1. HelloFile prompts the user that it needs the read and write permission.
+	
+        Use case resumes.
+
+<br />
+
+**UseCase ID: UC05**
+
+**Use Case: Show a tagged file’s path**
+
+**MSS**
+
+1. User requests the check the path of a tagged file.
+2. HelloFile recognises that the tag exist.
+3. HelloFile shows the path of the file.
+
+    Use case ends.
+    
+**Extensions**
+
+* 2a. HelloFile failed to recognize the tag.
+
+	* 2a1. HelloFile prompts the user that the tag is wrong.
+	
+        Use case resumes from step 1.
+        
+* 3a. HelloFile detects that the target file does not exist.
+
+	* 3a1. HelloFile prompts that the target file does not exist.
+		
+        Use case resumes from step 1.
+		    
+* *a. HelloFile has no permission to read or write to the file system.
+
+	* *a1. HelloFile prompts the user that it needs the read and write permission.
+	
+	    Use case resumes.
+
+<br />
+
+**UseCase ID: UC06**
+
+**Use Case: Access the parent folder of a tagged file**
+
+**MSS**
+
+1. User request to open parent folder of a tagged file.
+2. HelloFile recognises the tag exist.
+3. HelloFile open the parent folder with the tag.
+
+    Use case ends.
+    
+**Extension**
+
+* 2a. HelloFile detects that the tag is invalid.
+
+	* 2a1. HelloFile prompts the user that the tag is wrong.
+	
+        Use case resumes from step 1.
+        
+* 3a. HelloFile detects that the target file does not exist.
+	
+	* 3a1. HelloFile prompts that the target file does not exist.
+		
+	    Use case resumes from step 1.
+		
+* 3b. HelloFile detects no default application to open the file.
+	
+	* 3b1. HelloFile prompts the user to choose an application to open the file.
+		
+        Use case resumes form step 1.
+		
+* 3c. HelloFile encounters an exception when opening the file.
+	
+	* 3c1. HelloFile shows the error message.
+		
+		Use case resumes from step 1.
+		
+* *a. HelloFile has no permission to read or write to the file system.
+
+	* *a1. HelloFile prompts the user that it needs the read and write permission.
+	
+	    Use case resumes.
+
+<br />
+
+**UseCase ID: UC07**
+
+**Use Case: Show the user help**
+
+**MSS**
+
+1. User requests to see the user help.
+2. HelloFile shows the user help.
 
     Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+* *a. User input the wrong command.
+	
+	* *a1. HelloFile shows the error message and direct the user to enter the user help command.
+	
+	    Use case ends.
 
-  Use case ends.
-
-* 3a. The given index is invalid.
-
-    * 3a1. AddressBook shows an error message.
-
-      Use case resumes at step 2.
 
 *{More to be added}*
 
