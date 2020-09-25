@@ -236,29 +236,32 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* has a need to manage a significant number of contacts
+* Tech savvy NUS Computer Science Student
+* has a need to manage a significant number of files
 * prefer desktop apps over other types
 * can type fast
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
 
-**Value proposition**: manage contacts faster than a typical mouse/GUI driven app
+**Value proposition**: Allow CS students to manage/access their files by typing 
+                       and using a simple GUI. Help CS students to see file relations easily.
 
 
 ### User stories
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                     | So that I can…​                                                        |
-| -------- | ------------------------------------------ | ------------------------------ | ---------------------------------------------------------------------- |
-| `* * *`  | new user                                   | see usage instructions         | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person               |                                                                        |
-| `* * *`  | user                                       | delete a person                | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name          | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details   | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name           | locate a person easily                                                 |
+| Priority | As a …​                                                     | I want to …​                                       | So that I can…​                                        |
+| -------- | ---------------------------------------------------------------| ------------------------------------------------------| ----------------------------------------------------------|
+| `* * *`  | Student with lots of file                                      | tag my files with a easy to remember tag              | get file path                                             |
+| `* * *`  | First time user                                                | use a help command                                    | start to remember how to use the command                  |
+| `* * *`  | Student who prefers to type                                    | use typing to interact with my file system            | use keyboard as much as possible                          |
+| `* * *`  | Student who is familiar with command line applications         | name my files                                         | access the file easily next time                          |  
+| `* *`    | CS student with a lot of project                               | hide private contact details                          | minimize chance of someone else seeing them by accident   |
+| `*`      | Forgetful user who always forget where his files are located   | tag frequently used files with a easy to remember tag | locate my files easily                                    |
+| `*`      | Intermediate user                                              | delete file                                           | not be distracted by it.                                  |
+| `*`      | Developer                                                      | open files with a quick command                       | focus on coding and not look to find my files             |   
 
-*{More to be added}*
 
 ### Use cases
 
